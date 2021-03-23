@@ -2,7 +2,7 @@
 {% static "images" as BaseUrl %}
 <html lang="en">
 <head>
-<title>Travello</title>
+<title>renthumans</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Travello template project">
@@ -29,22 +29,24 @@
                 <div class="col">
                     <div class="header_content d-flex flex-row align-items-center justify-content-start">
                         <div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-                            <div class="logo"><a href="index.html">Travello</a></div>
+                            <div class="logo"><a href="/">renthumans</a></div>
                             <nav class="main_nav">
                                 <ul class="d-flex flex-row align-items-start justify-content-start">
-                                    <li class="active"><a href="index.html">Home</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+
+                                    <li><a href="/">home</a></li>
+                                    <li><a href="contact">contact</a></li>
 
                                     {% if user.is_authenticated %}
-                                        <li>Hello, {{ user.first_name }}</a></li>
-                                        <li><a href="accounts/logout">Logout</a></li>
+                                    <li> yo {{user.first_name}}</li>
+                                    <li><a href="accounts/logout">logout</a></li>
                                     {% else %}
-                                        <li><a href="accounts/register">Register</a></li>
-                                        <li><a href="accounts/login">Login</a></li>
+                                    <li><a href="accounts/register">register</a></li>
+                                    <li><a href="accounts/login">login</a></li>
                                     {% endif %}
+
                                 </ul>
                             </nav>
-                            <div class="header_phone ml-auto">Call us: 00-56 445 678 33</div>
+                            <div class="header_phone ml-auto">call us on: 0800-rent-a-human</div>
 
                             <!-- Hamburger -->
 
@@ -108,13 +110,13 @@
 
                 <!-- Slide -->
                 <div class="owl-item">
-                    <div class="background_image" style="background-image:url({%  static 'images/home_slider.jpg' %})"></div>
+                    <div class="background_image" style="background-image:url({%  static 'images/elements.jpg' %})"></div>
                     <div class="home_slider_content_container">
                         <div class="container">
                             <div class="row">
                                 <div class="col">
                                     <div class="home_slider_content">
-                                        <div class="home_title"><h2>Let us take you away</h2></div>
+                                        <div class="home_title"><h2>rent a human today</h2></div>
                                     </div>
                                 </div>
                             </div>
@@ -159,8 +161,6 @@
             <div class="home_page_nav">
                 <ul class="d-flex flex-column align-items-end justify-content-end">
                     <li><a href="#" data-scroll-to="#destinations">Offers<span>01</span></a></li>
-                    <li><a href="#" data-scroll-to="#testimonials">Testimonials<span>02</span></a></li>
-                    <li><a href="#" data-scroll-to="#news">Latest<span>03</span></a></li>
                 </ul>
             </div>
         </div>
@@ -173,14 +173,14 @@
             <div class="row">
                 <div class="col">
                     <div class="home_search_container">
-                        <div class="home_search_title">Search for your trip</div>
+                        <div class="home_search_title">search for your human</div>
                         <div class="home_search_content">
                             <form action="#" class="home_search_form" id="home_search_form">
                                 <div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
-                                    <input type="text" class="search_input search_input_1" placeholder="City" required="required">
-                                    <input type="text" class="search_input search_input_2" placeholder="Departure" required="required">
-                                    <input type="text" class="search_input search_input_3" placeholder="Arrival" required="required">
-                                    <input type="text" class="search_input search_input_4" placeholder="Budget" required="required">
+                                    <input type="text" class="search_input search_input_1" placeholder="gender" required="required">
+                                    <input type="text" class="search_input search_input_2" placeholder="age" required="required">
+                                    <input type="text" class="search_input search_input_3" placeholder="iq" required="required">
+                                    <input type="text" class="search_input search_input_4" placeholder="cost" required="required">
                                     <button class="home_search_button">search</button>
                                 </div>
                             </form>
@@ -204,10 +204,10 @@
                             <!-- Intro Item -->
                             <div class="col-lg-4 intro_col">
                                 <div class="intro_item d-flex flex-row align-items-end justify-content-start">
-                                    <div class="intro_icon"><img src="{% static 'images/beach.svg' %}" alt=""></div>
+                                    <div class="intro_icon"><img src="{% static 'images/mountain.svg' %}" alt=""></div>
                                     <div class="intro_content">
-                                        <div class="intro_title">Top Destinations</div>
-                                        <div class="intro_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+                                        <div class="intro_title">top humans</div>
+                                        <div class="intro_subtitle"><p>you wont find better</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -217,8 +217,8 @@
                                 <div class="intro_item d-flex flex-row align-items-end justify-content-start">
                                     <div class="intro_icon"><img src="{% static 'images/wallet.svg' %}" alt=""></div>
                                     <div class="intro_content">
-                                        <div class="intro_title">The Best Prices</div>
-                                        <div class="intro_subtitle"><p>Sollicitudin mauris lobortis in.</p></div>
+                                        <div class="intro_title">best prices</div>
+                                        <div class="intro_subtitle"><p>find em cheaper, i dare ya</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -226,10 +226,10 @@
                             <!-- Intro Item -->
                             <div class="col-lg-4 intro_col">
                                 <div class="intro_item d-flex flex-row align-items-end justify-content-start">
-                                    <div class="intro_icon"><img src="{% static 'images/suitcase.svg' %}" alt=""></div>
+                                    <div class="intro_icon"><img src="{% static 'images/camera.svg' %}" alt=""></div>
                                     <div class="intro_content">
-                                        <div class="intro_title">Amazing Services</div>
-                                        <div class="intro_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+                                        <div class="intro_title">amazing services</div>
+                                        <div class="intro_subtitle"><p>literally anything you can think of</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -249,8 +249,8 @@
         <div class="container">
         <div class="row">
             <div class="col text-center">
-                <div class="section_subtitle">simply amazing places</div>
-                <div class="section_title"><h2>Popular Destinations</h2></div>
+                <div class="section_subtitle">simply amazing people</div>
+                <div class="section_title"><h2>popular humans</h2></div>
             </div>
         </div>
         <div class="row destinations_row">
@@ -282,70 +282,6 @@
     </div>
     </div>
 
-    <!-- Testimonials -->
-
-    <div class="testimonials" id="testimonials">
-        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/testimonials.jpg' %}" data-speed="0.8"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <div class="section_subtitle">simply amazing places</div>
-                    <div class="section_title"><h2>Testimonials</h2></div>
-                </div>
-            </div>
-            <div class="row testimonials_row">
-                <div class="col">
-
-                    <!-- Testimonials Slider -->
-                    <div class="testimonials_slider_container">
-                        <div class="owl-carousel owl-theme testimonials_slider">
-
-                            <!-- Slide -->
-                            <div class="owl-item text-center">
-                                <div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
-                                <div class="testimonial_author">
-                                    <div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-                                        <div>john turner,</div>
-                                        <div>client</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Slide -->
-                            <div class="owl-item text-center">
-                                <div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
-                                <div class="testimonial_author">
-                                    <div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-                                        <div>john turner,</div>
-                                        <div>client</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Slide -->
-                            <div class="owl-item text-center">
-                                <div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
-                                <div class="testimonial_author">
-                                    <div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-                                        <div>john turner,</div>
-                                        <div>client</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="test_nav">
-            <ul class="d-flex flex-column align-items-end justify-content-end">
-                <li><a href="#">City Breaks Clients<span>01</span></a></li>
-                <li><a href="#">Cruises Clients<span>02</span></a></li>
-                <li><a href="#">All Inclusive Clients<span>03</span></a></li>
-            </ul>
-        </div>
-    </div>
 
     <!-- News -->
 
@@ -357,20 +293,20 @@
 
                         <!-- News Post -->
                         <div class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
-                            <div class="news_post_image"><img src="{% static 'images/news_1.jpg' %}" alt=""></div>
+                            <div class="news_post_image"><img src="{% static 'images/about_1.jpg' %}" alt=""></div>
                             <div class="news_post_content">
                                 <div class="news_post_date d-flex flex-row align-items-end justify-content-start">
                                     <div>02</div>
                                     <div>june</div>
                                 </div>
-                                <div class="news_post_title"><a href="#">Best tips to travel light</a></div>
+                                <div class="news_post_title"><a href="#">Best tips for renting humans</a></div>
                                 <div class="news_post_category">
                                     <ul>
                                         <li><a href="#">lifestyle & travel</a></li>
                                     </ul>
                                 </div>
                                 <div class="news_post_text">
-                                    <p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet.</p>
+                                    <p>A delightful and thorough catalogue of useful tips when one needs to rent a human.</p>
                                 </div>
                             </div>
                         </div>
@@ -383,14 +319,14 @@
                                     <div>01</div>
                                     <div>june</div>
                                 </div>
-                                <div class="news_post_title"><a href="#">Best tips to travel light</a></div>
+                                <div class="news_post_title"><a href="#">Get em shipped to you dor, for free!</a></div>
                                 <div class="news_post_category">
                                     <ul>
-                                        <li><a href="#">lifestyle & travel</a></li>
+                                        <li><a href="#">Money Saving</a></li>
                                     </ul>
                                 </div>
                                 <div class="news_post_text">
-                                    <p>Tempor massa et laoreet malesuada. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo.</p>
+                                    <p>Aint nothing wrong with saving money whilst renting humans.</p>
                                 </div>
                             </div>
                         </div>
@@ -403,14 +339,14 @@
                                     <div>29</div>
                                     <div>may</div>
                                 </div>
-                                <div class="news_post_title"><a href="#">Best tips to travel light</a></div>
+                                <div class="news_post_title"><a href="#">Custom yacht humans might change your life</a></div>
                                 <div class="news_post_category">
                                     <ul>
-                                        <li><a href="#">lifestyle & travel</a></li>
+                                        <li><a href="#">Luxury</a></li>
                                     </ul>
                                 </div>
                                 <div class="news_post_text">
-                                    <p>Vivamus massa.Tempor massa et laoreet malesuada. Aliquam nulla nisl, accumsan sit amet mattis.</p>
+                                    <p>I was completely againt the idea at first but then i tried it...</p>
                                 </div>
                             </div>
                         </div>
@@ -432,7 +368,7 @@
                             <a href="#">
                                 <div class="d-flex flex-column align-items-center justify-content-end">
                                     <span class="travello_title">Get a 20% Discount</span>
-                                    <span class="travello_subtitle">Buy Your Vacation Online Now</span>
+                                    <span class="travello_subtitle">Rent Your Human Online Now</span>
                                 </div>
                             </a>
                         </div>
